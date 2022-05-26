@@ -1,7 +1,5 @@
-package io.benyon.jpajwt.models.models.models;
+package io.benyon.jpajwt.models;
 
-
-import io.benyon.jpajwt.models.models.Role;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -84,7 +82,5 @@ public class User {
   public void setRoles(Set<Role> roles) {
     this.roles = roles;
   }
-  
-  
   
 }

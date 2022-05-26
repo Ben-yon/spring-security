@@ -1,4 +1,4 @@
-package io.benyon.jpajwt.models.models;
+package io.benyon.jpajwt.models;
 
 import io.benyon.jpajwt.models.ERole;
 
