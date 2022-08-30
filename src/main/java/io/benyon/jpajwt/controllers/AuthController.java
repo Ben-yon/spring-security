@@ -9,7 +9,7 @@ import io.benyon.jpajwt.payloads.request.SignupRequest;
 import io.benyon.jpajwt.payloads.response.JwtResponse;
 import io.benyon.jpajwt.payloads.response.MessageResponse;
 import io.benyon.jpajwt.repositories.UserRepository;
-import io.benyon.jpajwt.repositories.repositories.RoleRepository;
+import io.benyon.jpajwt.repositories.RoleRepository;
 import io.benyon.jpajwt.service.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
