@@ -21,17 +21,15 @@ public class Ticket{
   private String destination;
   
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "user_d")
+  @JoinColumn(name = "user_id")
   private User user;
   
   @NotBlank
   @Size(max = 15)
-  private String ticket_type;
+  private String ticketType;
   
-  @NotBlank
   private Date dateOfDeparture;
   
-  @NotBlank
   private Date dateOfArrival;
 
   @NotBlank
@@ -41,11 +39,10 @@ public class Ticket{
 
   public Ticket(){}
 
-  public Ticket(Integer id, String origin, String destination, String ticket_type, Date dateOfDeparture, Date dateOfArrival, String seatNumber) {
-    this.id = id;
+  public Ticket(String origin, String destination, String ticketType, Date dateOfDeparture, Date dateOfArrival, String seatNumber) {
     this.origin = origin;
     this.destination = destination;
-    this.ticket_type = ticket_type;
+    this.ticketType = ticketType;
     this.dateOfDeparture = dateOfDeparture;
     this.dateOfArrival = dateOfArrival;
     this.seatNumber = seatNumber;
@@ -106,11 +103,11 @@ public class Ticket{
 //    this.user = user;
 //  }
 
-  public String getTicket_type() {
-    return ticket_type;
+  public String getTicketType() {
+    return ticketType;
   }
 
-  public void setTicket_type(String ticket_type) {
-    this.ticket_type = ticket_type;
+  public void setTicket_type(String ticketType) {
+    this.ticketType = ticketType;
   }
 }
