@@ -1,4 +1,4 @@
-package io.benyon.jpajwt.service;
+package io.benyon.jpajwt.services;
 
 import io.benyon.jpajwt.models.Ticket;
 import io.benyon.jpajwt.repositories.TicketRepository;

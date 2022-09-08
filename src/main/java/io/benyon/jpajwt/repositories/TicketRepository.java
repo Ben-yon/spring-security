@@ -14,6 +14,8 @@ import java.util.Optional;
 public interface TicketRepository extends JpaRepository<Ticket, Long> {
   List<Ticket> findAll();
   Optional<Ticket> findById(Long id);
+  List<Ticket> findAllById(Iterable<Long> longs);
+
   void deleteById(Long id);
   
 }

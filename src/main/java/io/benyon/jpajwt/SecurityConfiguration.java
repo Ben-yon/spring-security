@@ -2,7 +2,7 @@ package io.benyon.jpajwt;
 
 import io.benyon.jpajwt.jwt.AuthEntryPointJwt;
 import io.benyon.jpajwt.jwt.AuthTokenFilter;
-import io.benyon.jpajwt.service.UserDetailsServiceImpl;
+import io.benyon.jpajwt.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

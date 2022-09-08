@@ -1,6 +1,6 @@
 package io.benyon.jpajwt.jwt;
 
-import io.benyon.jpajwt.service.UserDetailsImpl;
+import io.benyon.jpajwt.services.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
