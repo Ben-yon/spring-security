@@ -4,6 +4,7 @@ import io.benyon.jpajwt.models.Ticket;
 import io.benyon.jpajwt.payloads.request.BookTicketRequest;
 import io.benyon.jpajwt.payloads.response.MessageResponse;
 import io.benyon.jpajwt.repositories.TicketRepository;
+import io.benyon.jpajwt.services.EmailServiceImpl;
 import io.benyon.jpajwt.services.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,7 @@ public class TicketController {
   
   @Autowired
   TicketService ticketService;
+  
   
   @Autowired
   TicketRepository ticketRepository;
@@ -42,6 +44,7 @@ public class TicketController {
       bookTicketRequest.getSeatNumber()
     );
     ticketRepository.save(ticket);
+    
     return ResponseEntity.ok(new MessageResponse("Ticket booked successfully!"));
   }
 }

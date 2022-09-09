@@ -1,0 +1,30 @@
+#Database connection
+spring.datasource.url= 
+spring.datasource.username= 
+spring.datasource.password= 
+spring.jpa.properties.dialect= 
+spring.jpa.hibernate.ddl-auto= 
+
+
+#App Properties
+app.jwtSecret= 
+app.jwtExpirations= 
+
+#Oauth2 for Facebook
+spring.security.oauth2.client.registration.facebook.client-id=
+spring.security.oauth.client.registration.facebook.client-secret=
+spring.security.oauth.client.registration.my-client-1.client-name=
+spring.security.oauth.client.registration.my-client-1.client-provider=
+spring.security.oauth.client.registration.my-client-1.client-scope=
+spring.security.oauth.client.registration.my-client-1.redirect-uri=
+spring.security.oauth.client.registration.my-client-1.client-authentication-method=
+spring.security.oauth.client.registration.my-client-1.authorization-grant-type=
+
+
+#springboot mailer props
+spring.mail.host=
+spring.mail.port=
+spring.mail.username=
+spring.mail.password=
+spring.mail.properties.mail.smtp.auth=
+spring.mail.properties.mail.smtp.starttls.enable=
