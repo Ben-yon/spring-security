@@ -1,62 +1,54 @@
 package io.benyon.jpajwt.payloads.request;
 
+import io.benyon.jpajwt.models.Ticket;
+
 import java.util.Date;
 
 public class BookTicketRequest {
 
-  private String origin;
-  private Date dateOfDeparture;
-  private String destination;
-  private Date dateOfArrival;
-    
-  private String seatNumber;
-  private String ticketType;
+  private Ticket ticket;
+  private String customerName;
+  private String customerAddress;
+  private String customerEmail;
+  private Date bookDate;
 
-  public String getTicketType() {
-    return ticketType;
+  public Ticket getTicket() {
+    return ticket;
   }
 
-  public void setTicketType(String ticketType) {
-    this.ticketType = ticketType;
+  public void setTicket(Ticket ticket) {
+    this.ticket = ticket;
   }
 
-  public Date getDateOfDeparture() {
-    return dateOfDeparture;
+  public String getCustomerName() {
+    return customerName;
   }
 
-  public void setDateOfDeparture(Date dateOfDeparture) {
-    this.dateOfDeparture = dateOfDeparture;
+  public void setCustomerName(String customerName) {
+    this.customerName = customerName;
   }
 
-  public String getOrigin() {
-    return origin;
+  public String getCustomerAddress() {
+    return customerAddress;
   }
 
-  public void setOrigin(String origin) {
-    this.origin = origin;
+  public void setCustomerAddress(String customerAddress) {
+    this.customerAddress = customerAddress;
   }
 
-  public String getDestination() {
-    return destination;
+  public String getCustomerEmail() {
+    return customerEmail;
   }
 
-  public void setDestination(String destination) {
-    this.destination = destination;
+  public void setCustomerEmail(String customerEmail) {
+    this.customerEmail = customerEmail;
   }
 
-  public Date getDateOfArrival() {
-    return dateOfArrival;
+  public Date getBookDate() {
+    return bookDate;
   }
 
-  public void setDateOfArrival(Date dateOfArrival) {
-    this.dateOfArrival = dateOfArrival;
-  }
-
-  public String getSeatNumber() {
-    return seatNumber;
-  }
-
-  public void setSeatNumber(String seatNumber) {
-    this.seatNumber = seatNumber;
+  public void setBookDate(Date bookDate) {
+    this.bookDate = bookDate;
   }
 }

@@ -4,13 +4,14 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "ticket")
 public class Ticket{
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
+  private Long id;
   
   @NotBlank
   @Size(max = 50)
@@ -20,9 +21,12 @@ public class Ticket{
   @Size(max = 50)
   private String destination;
   
-  @ManyToOne(fetch = FetchType.LAZY)
+  @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
   @JoinColumn(name = "user_id")
   private User user;
+  
+  @OneToMany(mappedBy = "ticket", fetch = FetchType.EAGER)
+  private Set<BookedTicket> bookedTickets;
   
   @NotBlank
   @Size(max = 15)
@@ -71,11 +75,11 @@ public class Ticket{
     this.dateOfArrival = dateOfArrival;
   }
 
-  public Integer getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(Integer id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
@@ -95,13 +99,6 @@ public class Ticket{
     this.destination = destination;
   }
 
-//  public User getUser() {
-//    return user;
-//  }
-//
-//  public void setUser(User user) {
-//    this.user = user;
-//  }
 
   public String getTicketType() {
     return ticketType;

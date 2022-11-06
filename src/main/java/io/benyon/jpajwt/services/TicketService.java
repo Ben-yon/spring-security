@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TicketService{
@@ -17,5 +18,9 @@ public class TicketService{
   @Bean
   public List<Ticket> getAllTicket(){
     return ticketRepository.findAll();
+  }
+  
+  public Optional getTicketById(Long id){
+    return ticketRepository.findById(id);
   }
 }
