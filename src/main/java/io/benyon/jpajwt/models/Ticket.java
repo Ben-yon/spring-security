@@ -38,18 +38,29 @@ public class Ticket{
 
   @NotBlank
   private String seatNumber;
-
+  
+  @NotBlank
+  private String img_url;
 
 
   public Ticket(){}
 
-  public Ticket(String origin, String destination, String ticketType, Date dateOfDeparture, Date dateOfArrival, String seatNumber) {
+  public Ticket(String origin, String destination, String ticketType, Date dateOfDeparture, Date dateOfArrival, String seatNumber, String img_url) {
     this.origin = origin;
     this.destination = destination;
     this.ticketType = ticketType;
     this.dateOfDeparture = dateOfDeparture;
     this.dateOfArrival = dateOfArrival;
     this.seatNumber = seatNumber;
+    this.img_url = img_url;
+  }
+
+  public String getImg_url() {
+    return img_url;
+  }
+
+  public void setImg_url(String img_url) {
+    this.img_url = img_url;
   }
 
   public Date getDateOfDeparture() {

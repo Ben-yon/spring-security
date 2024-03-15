@@ -39,7 +39,6 @@ public class BookedTicketController {
 
   @PostMapping("/book-ticket")
   public ResponseEntity<?> BookTicket(@Valid @RequestBody BookTicketRequest bookTicketRequest) {
-    Ticket ticket = new Ticket();
     BookedTicket bookedTicket = new BookedTicket(
       bookTicketRequest.getTicket().getId(),
       bookTicketRequest.getCustomerName(),
